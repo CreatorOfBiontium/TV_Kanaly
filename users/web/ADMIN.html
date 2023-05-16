@@ -7,7 +7,94 @@
         <script src = "https://creatorofbiontium.github.io/TV_Kanaly/MSF script.js"></script>
         <title>TV kanály | ADMIN</title>
     </head>
-
-    <body>
+    <style>
+        body {
+          background-color: rgb(149, 170, 179);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
     
-  
+        .container {
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+        }
+    
+        .container label {
+          display: block;
+          margin-bottom: 10px;
+        }
+    
+        .container input[type="text"],
+        .container input[type="password"] {
+          border-radius: 5px;
+          padding: 5px;
+          margin-bottom: 10px;
+          width: 200px;
+        }
+    
+        .container button[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h2>Zadej údaje</h2>
+        <form id="loginForm">
+          <label for="idInput">ID:</label>
+          <input type="text" id="idInput" required>
+          <label for="passwordInput">Heslo:</label>
+          <input type="password" id="passwordInput" required><br>
+          <button type="submit">Přihlásit</button>
+        </form>
+      </div>
+    
+      <script>
+        var a = 0
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Zabraňuje odeslání formuláře
+    
+          // Získání hodnot z formuláře
+          var id = document.getElementById("idInput").value;
+          var heslo = document.getElementById("passwordInput").value;
+    
+
+            if(id === "mojeid"){
+                var a = 0
+                // Uložení hodnot do localStorage
+                localStorage.setItem("accesstofile1", JSON.stringify({ id: id, heslo: heslo }))
+                
+            }
+            
+            else if(id === "mojeid2"){
+                var a = 0
+                localStorage.setItem("accesstofile1", JSON.stringify({ id: id, heslo: heslo }))
+                
+            }
+
+            else if(id === "mojeid3"){
+                var a = 0
+                localStorage.setItem("accesstofile3", JSON.stringify({ id: id, heslo: heslo }))
+            }
+            else{
+                var a = 1
+            }
+            if(a === 0){
+            alert("Úspěšně zadáno")
+            }else if(a === 1){alert("Údaje zadány úspěšně, klíč nenalezen")}
+
+
+            }
+        );
+      </script>
+    </body>
+</html>

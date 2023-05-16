@@ -8,6 +8,10 @@
     <script src = "OF script.js"></script>
     <title>TV kanály - index.html - DEV VERSION</title>
     </head>
+
+
+
+    
     <body>
     
    
@@ -21,12 +25,64 @@
     <br>
     <ul id="myUL">
      
-        <li><a href="users/web/userBabiEli.html" id="Ba1" title = "Uživatel BabiEli">oWA/BabiEli </a></li>
-        <li><a href="users/web/userRoVastakovi.html" id="Ro1" title = "uživatel RoVastakovi">oWA/RoVastakovi  </a></li>
         <li><a href="users/online/actusers.html" id="OnU" title = "nástroj pro zobrazení účtů">online/users</a></li>
+        <li><a href="users/web/ADMIN.html" id="OnU1" title = "ADMIN">loc/ADMIN</a></li>
     </ul>
+
+<script>
+    var accessData = localStorage.getItem("accestofile");
+    var accessData2 = localStorage.getItem("accestofile2");
+    var accessData3 = localStorage.getItem("accestofile3");
+
+    if (accessData) {
+      accessData = JSON.parse(accessData);
+      var savedHeslo = accessData.heslo;}
+
+    if (savedHeslo === "mojeheslo") {
+        var ul = document.getElementById("myUL");
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = "users/web/userBabiEli.html";
+        a.textContent = "oWA/BabiEli";
+        li.appendChild(a);
+        ul.appendChild(li);}
+
+
+
+      if (accessData2) {
+        accessData2 = JSON.parse(accessData2);
+        var savedHeslo2 = accessData2.heslo;
+
+
+        if (savedHeslo2 === "mojeheslo2") {
+            var ul = document.getElementById("myUL");
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = "users/web/userRoVastakovi.html";
+            a.textContent = "oWA/RoVastakovi";
+            li.appendChild(a);
+            ul.appendChild(li);}
+    }
+
+        if (accessData3) {
+            accessDat3 = JSON.parse(accessData3);
+            var savedHeslo3 = accessData3.heslo;
+
+            if (savedHeslo3 === "mojeheslo3") {
+                var ul = document.getElementById("myUL");
+                var li = document.createElement("li");
+                var a = document.createElement("a");
+                a.href = "users/web/userTobtelka.html";
+                a.textContent = "oWA/TobTelka";
+                li.appendChild(a);
+                ul.appendChild(li);}
+        }
+      
+  </script>
+
 
 
 <div id = "centr">
     <p>Vezre: A0.25-11.3.23-BU/1:12</p>
 </div>
+

@@ -9,8 +9,29 @@
     <title>TV kanály - user TobTelka</title>
     </head>
     <body>
-
-        some text
+        <script>
+            // Získání uložených hodnot z localStorage
+            var accessData = localStorage.getItem("accesstofile1");
+        
+            if (!accessData) {
+              // Hodnoty nejsou uloženy, zobrazit formulář pro zadání hesla
+              window.location.href = "ADMIN.html";
+            } else {
+              // Hodnoty jsou uloženy, zpracování přístupových údajů
+              accessData = JSON.parse(accessData);
+              var savedId = accessData.id;
+              var savedHeslo = accessData.heslo;
+        
+              // Porovnání přístupových údajů
+              if (savedId !== "mojeid" || savedHeslo !== "mojeheslo") {
+                // Neplatné přístupové údaje, zobrazit formulář pro zadání hesla
+                window.location.href = "admin.html";
+              } else {
+                // Platné přístupové údaje, zobrazit obsah souboru.html
+                document.body.innerHTML = "<h1>Přístup povolen</h1>";
+              }
+            }
+          </script>
 
     </body>
 </html>
