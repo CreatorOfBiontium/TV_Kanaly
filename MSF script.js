@@ -1,5 +1,3 @@
-
-
     function myFunction() {
         var input, filter, ul, li, a, i, txtValue;
         input = document.getElementById("myInput");
@@ -47,15 +45,6 @@
     var d = new Date();
     var n = d.toLocaleTimeString();
 
-    function myunction() {
-        if (confirm("Tato stránka je ve vývoji a nejsou nastavena žádná omezení. Nejsou nastavena žádná hesla. Kliknutím na zrušit nesouhlasíte.")) {
-            console.log("Potvrzeno", n, "/DEV/");
-          } else {
-            console.log("Zrušeno", n, "/DEV/");
-            console.log("Closig in few seconds", n, "/DEV/")
-            close()
-          }
-    }
 
 
     function klik(){

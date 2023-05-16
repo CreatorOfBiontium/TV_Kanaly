@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/tajna-stranka.html$
+RewriteRule ^ - [F]
