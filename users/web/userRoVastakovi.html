@@ -9,25 +9,29 @@
     </head>
 
     <body>
+        <script>
+            // Získání uložených hodnot z localStorage
+            var accessData = localStorage.getItem("accesstofile1");
+        
+            if (!accessData) {
+              // Hodnoty nejsou uloženy, zobrazit formulář pro zadání hesla
+              window.location.href = "ADMIN.html";
+            } else {
+              // Hodnoty jsou uloženy, zpracování přístupových údajů
+              accessData = JSON.parse(accessData);
+              var savedId = accessData.id;
+              var savedHeslo = accessData.heslo;
+        
+              // Porovnání přístupových údajů
+              if (savedId !== "mojeid" || savedHeslo !== "mojeheslo") {
+                // Neplatné přístupové údaje, zobrazit formulář pro zadání hesla
+                window.location.href = "ADMIN.html";
+              } else {
+                // Platné přístupové údaje, zobrazit obsah souboru.html
+                document.body.innerHTML = '<div class="sticky2"> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Vyhledejte TV kanály" title="Vyhledejte TV kanály"> </div> <br> <ul id="myUL"> <li><a href="program.html"title="Zjisti více o tomto programu">26 ... "ČT 24"</a></li> </ul> <button onclick="topFunction()" id="myBtn" title="Jít nahoru">&#8593</button> <br> <div class="sticky"> <p4>Legenda: <br> 11 -- Číslo programu <br> .. -- Normální program <br> ... -- Zajímavý program <br> (Prima Ciomedy Central) -- Starý název kanálu <br> "Paramount Network" -- nýnější názej kanálu <br> - -- Kanál na kterém nic není <br> $ -- placený program</p4> </div>';
+              }
+            }
+          </script>
 
-    <div class="sticky2">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Vyhledejte TV kanály" title="Vyhledejte TV kanály">
- </div>
-
-
- <br>
-    <ul id="myUL">
-     
-        <li><a href="program.html"title="Zjisti více o tomto programu">26 ... "ČT 24"</a></li>
-    
-    </ul>
-
-
-    <button onclick="topFunction()" id="myBtn" title="Jít nahoru">&#8593</button>
-
-
- <br>
- <div class="sticky">
-<p6>Legenda: <br> 11 -- Číslo programu <br> .. -- Normální program <br> ... -- Zajímavý program <br> (Prima Ciomedy Central) -- Starý název kanálu <br> "Paramount Network" -- nýnější názej kanálu <br> - -- Kanál na kterém nic není <br> $ -- placený program</p6>
-</div>
+</body>
 </html>
