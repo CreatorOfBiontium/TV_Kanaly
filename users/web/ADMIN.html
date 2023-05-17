@@ -54,7 +54,7 @@
           <input type="text" id="idInput" required>
           <label for="passwordInput">Heslo:</label>
           <input type="password" id="passwordInput" required><br>
-          <button type="submit">Přihlásit</button>
+          <button type="submit">Přdat</button>
         </form>
       </div>
     
@@ -72,24 +72,29 @@
                 var a = 0
                 // Uložení hodnot do localStorage
                 localStorage.setItem("accesstofile1", JSON.stringify({ id: id, heslo: heslo }))
-                
+                console.log("mojeid + " + heslo)
+                console.log(localStorage.getItem("accesstofile1"))
             }
             
             else if(id === "mojeid2"){
                 var a = 0
-                localStorage.setItem("accesstofile1", JSON.stringify({ id: id, heslo: heslo }))
-                
+                localStorage.setItem("accesstofile2", JSON.stringify({ id: id, heslo: heslo }))
+                console.log("mojeid2 + " + heslo)
+                console.log(localStorage.getItem("accesstofile2"))
             }
 
             else if(id === "mojeid3"){
                 var a = 0
                 localStorage.setItem("accesstofile3", JSON.stringify({ id: id, heslo: heslo }))
+                console.log("mojeid3 + " + heslo)
+                console.log(localStorage.getItem("accesstofile3"))
             }
             else{
+              console.log("Schilerová be like: else")
                 var a = 1
             }
             if(a === 0){
-            alert("Úspěšně zadáno")
+            alert("Úspěšně přidáno")
             }else if(a === 1){alert("Údaje zadány úspěšně, klíč nenalezen")}
 
 

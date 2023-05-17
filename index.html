@@ -30,52 +30,57 @@
     </ul>
 
 <script>
-    var accessData = localStorage.getItem("accestofile");
-    var accessData2 = localStorage.getItem("accestofile2");
-    var accessData3 = localStorage.getItem("accestofile3");
+    var accessData = localStorage.getItem("accesstofile1");
+    var accessData2 = localStorage.getItem("accesstofile2");
+    var accessData3 = localStorage.getItem("accesstofile3");
 
     if (accessData) {
       accessData = JSON.parse(accessData);
       var savedHeslo = accessData.heslo;}
+      console.log("1")
 
     if (savedHeslo === "mojeheslo") {
+        console.log("1.2")
         var ul = document.getElementById("myUL");
         var li = document.createElement("li");
         var a = document.createElement("a");
         a.href = "users/web/userBabiEli.html";
         a.textContent = "oWA/BabiEli";
         li.appendChild(a);
-        ul.appendChild(li);}
+        ul.insertBefore(li, ul.firstChild);}
 
 
 
       if (accessData2) {
         accessData2 = JSON.parse(accessData2);
         var savedHeslo2 = accessData2.heslo;
-
+        console.log("2")
 
         if (savedHeslo2 === "mojeheslo2") {
+            console.log("2.1")
             var ul = document.getElementById("myUL");
             var li = document.createElement("li");
             var a = document.createElement("a");
             a.href = "users/web/userRoVastakovi.html";
             a.textContent = "oWA/RoVastakovi";
             li.appendChild(a);
-            ul.appendChild(li);}
+            ul.insertBefore(li, ul.firstChild);}
     }
 
         if (accessData3) {
-            accessDat3 = JSON.parse(accessData3);
+            accessData3 = JSON.parse(accessData3);
             var savedHeslo3 = accessData3.heslo;
+            console.log("3")
 
             if (savedHeslo3 === "mojeheslo3") {
+                console.log("3.1")
                 var ul = document.getElementById("myUL");
                 var li = document.createElement("li");
                 var a = document.createElement("a");
                 a.href = "users/web/userTobtelka.html";
                 a.textContent = "oWA/TobTelka";
                 li.appendChild(a);
-                ul.appendChild(li);}
+                ul.insertBefore(li, ul.firstChild);}
         }
       
   </script>
