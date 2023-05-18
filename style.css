@@ -93,10 +93,60 @@
         font-size: 15px;        
       }
 
+      #centrr2{
+        text-align: center;
+        margin-top: 2%;
+        font-size: 15px;    
+      }
 
 
       #centrr{
         text-align: center;
         margin-top: 10%;
         font-size: 15px;    
+      }
+
+
+      .ctc{
+        font-size: 90px;
+        font-family: arial;
+        text-align: center;
+      }
+      
+      .tct{
+        font-size: 35px;
+        font-family: arial;
+        text-align: center;
+      }
+
+      .divcntr{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+
+
+
+
+      .backbut{
+        justify-content: center;
+        border: 2px;
+        border-radius: 6px;
+        background-color: rgb(27, 160, 27);
+        color: #e8e8e8;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 28px;
+        padding-right: 28px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .backbut:hover{
+        background-color: rgb(0, 176, 0);
+        color: #303030;
+
       }
