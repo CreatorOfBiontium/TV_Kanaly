@@ -11,7 +11,7 @@
     <body>
         <script>
             // Získání uložených hodnot z localStorage
-            var accessData = localStorage.getItem("accesstofile1");
+            var accessData = localStorage.getItem("accesstofile3");
         
             if (!accessData) {
               // Hodnoty nejsou uloženy, zobrazit formulář pro zadání hesla
@@ -23,7 +23,7 @@
               var savedHeslo = accessData.heslo;
         
               // Porovnání přístupových údajů
-              if (savedId !== "mojeid" || savedHeslo !== "mojeheslo") {
+              if (savedId !== "mojeid3" || savedHeslo !== "mojeheslo3") {
                 // Neplatné přístupové údaje, zobrazit formulář pro zadání hesla
                 window.location.href = "ADMIN.html";
               } else {
