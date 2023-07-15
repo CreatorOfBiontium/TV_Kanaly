@@ -1,153 +1,206 @@
 
-    * {
-      box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  
+  #myInput {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 8%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 0px;
+  }
+  
+  #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myUL li a {
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee;
+  }
+  
+  body {
+    font-family: Arial ;
+      background-color: rgb(149, 170, 179);
     }
     
-    #myInput {
-      background-position: 10px 12px;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 8%;
-      font-size: 16px;
-      padding: 12px 20px 12px 40px;
-      border: 1px solid #ddd;
-      margin-bottom: 0px;
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgb(68, 68, 68);
+    padding: 10px;
+    font-size: 20px;
+  }
 
-    }
+  div.sticky2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 4px;
+  }
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 22px;
+    right: 32px;
+    z-index: 99;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    background-color: rgb(135, 156, 165);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 30px;
+  }
     
-    #myUL {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
+  #myBtn:hover {
+    background-color: #555;
+    color: rgb(255, 255, 255);        
+  }
+
+  #centr{
+    margin-top: 28%;
+    text-align: center;
+    font-size: 15px;        
+  }
+
+  #centrr2{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 15px;    
+  }
+
+  #centrr{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 15px;    
+  }
+
+  .ctc{
+    font-size: 90px;
+    font-family: arial;
+    text-align: center;
+  }
     
-    #myUL li a {
-      border: 1px solid rgb(255, 255, 255);
-      margin-top: -1px; /* Prevent double borders */
-      background-color: #ffffff;
-      padding: 12px;
-      text-decoration: none;
-      font-size: 18px;
-      color: black;
-      display: block
-    }
+  .tct{
+    font-size: 35px;
+    font-family: arial;
+    text-align: center;
+  }
+
+  .divcntr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .backbut{
+    justify-content: center;
+    border: 2px;
+    border-radius: 6px;
+    background-color: rgb(27, 160, 27);
+    color: #e8e8e8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 28px;
+    padding-right: 28px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .backbut:hover{
+    background-color: rgb(0, 176, 0);
+    color: #303030;
+  }
     
-    #myUL li a:hover:not(.header) {
-      background-color: #eee;
-    }
-    
-    body {
-      font-family: Arial ;
-        background-color: rgb(149, 170, 179);
-      }
-
-
-
-      
-
-      div.sticky {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        background-color: rgb(68, 68, 68);
-        padding: 10px;
-        font-size: 20px;
-      }
-
-      div.sticky2 {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        border: 2px;
-        border-color: black;
-        border-style: solid;
-        border-radius: 4px;
-      }
-
-
-
-      #myBtn {
-        display: none;
-        position: fixed;
-        bottom: 22px;
-        right: 32px;
-        z-index: 99;
-        font-size: 22px;
-        border: none;
-        outline: none;
-        background-color: rgb(135, 156, 165);
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 30px;
-      }
-      
-      #myBtn:hover {
-        background-color: #555;
-        color: rgb(255, 255, 255);        
-      }
-
-
-      #centr{
-        margin-top: 28%;
-        text-align: center;
-        font-size: 15px;        
-      }
-
-      #centrr2{
-        text-align: center;
-        margin-top: 2%;
-        font-size: 15px;    
-      }
-
-
-      #centrr{
-        text-align: center;
-        margin-top: 10%;
-        font-size: 15px;    
-      }
-
-
-      .ctc{
-        font-size: 90px;
-        font-family: arial;
-        text-align: center;
-      }
-      
-      .tct{
-        font-size: 35px;
-        font-family: arial;
-        text-align: center;
-      }
-
-      .divcntr{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-      }
-
-
-
-
-
-      .backbut{
-        justify-content: center;
-        border: 2px;
-        border-radius: 6px;
-        background-color: rgb(27, 160, 27);
-        color: #e8e8e8;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 28px;
-        padding-right: 28px;
-        font-size: 25px;
-        cursor: pointer;
-      }
-
-      .backbut:hover{
-        background-color: rgb(0, 176, 0);
-        color: #303030;
-
-      }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a2a2a2; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7e7e7e; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+  
+  /* Buttons */
+  ::-webkit-scrollbar-button:single-button {
+    border-radius: 5px;
+  
+    display: block;
+    background-size: 10px;
+    background-repeat: no-repeat;
+  }
+  
+  /* Up */
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 12px;
+    width: 16px;
+    background-position: center 4px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='50,00 0,50 100,50'/></svg>");
+  }
+  
+  ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='50,00 0,50 100,50'/></svg>");
+  }
+  
+  ::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='50,00 0,50 100,50'/></svg>");
+  }
+  
+  /* Down */
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 12px;
+    width: 16px;
+    background-position: center 2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 100,0 50,50'/></svg>");
+  }
+  
+  ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 100,0 50,50'/></svg>");
+  }
+  
+  ::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 100,0 50,50'/></svg>");
+  
+  }
